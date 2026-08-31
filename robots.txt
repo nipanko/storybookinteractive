@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://storybookinteractive.com/sitemap.xml
+
+# Storybook Interactive
+# https://storybookinteractive.com

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Storybook Interactive — Making Learning Fun Through Play | Educational Game Studio India</title>
+  <meta name="description"
+    content="Storybook Interactive is an independent game studio from India creating educational games and interactive experiences. We make learning genuinely fun through play, story, and discovery.">
+  <meta name="keywords"
+    content="Storybook Interactive, educational games, learning games, indie game studio India, game-based learning, interactive learning, educational game development, fun learning games, Nipanko Nath Mazumder">
+  <meta name="author" content="Storybook Interactive Private Limited">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://storybookinteractive.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://storybookinteractive.com/">
+  <meta property="og:title" content="Storybook Interactive — Making Learning Fun Through Play!">
+  <meta property="og:description"
+    content="An independent game studio from India creating educational games that spark curiosity, inspire creativity, and make learning an exciting adventure.">
+  <meta property="og:site_name" content="Storybook Interactive">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Storybook Interactive — Making Learning Fun Through Play!">
+  <meta name="twitter:description"
+    content="An independent game studio from India creating educational games that spark curiosity and make learning an adventure.">
+
+  <!-- Theme & Icons -->
+  <meta name="theme-color" content="#FFC857">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Storybook Interactive Private Limited",
+    "alternateName": "Storybook Interactive",
+    "url": "https://storybookinteractive.com",
+    "logo": "https://storybookinteractive.com/favicon.svg",
+    "email": "nipanko@storybookinteractive.com",
+    "description": "An independent game studio from India creating educational games and interactive experiences. Making Learning Fun Through Play!",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "Nipanko Nath Mazumder",
+      "jobTitle": "Founder & Director"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Storybook Interactive",
+    "url": "https://storybookinteractive.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://storybookinteractive.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Background layers -->
+  <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
+  <div class="aesthetic-shapes" id="aestheticShapes" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-book">
+        <div class="loader-page"></div>
+        <div class="loader-page"></div>
+        <div class="loader-page"></div>
+      </div>
+      <p class="loader-text">Storybook <span>Interactive</span></p>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <a href="#home" class="site-logo" aria-label="Storybook Interactive — Home">
+        Storybook <span>Interactive</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#games" class="nav-link">Our Games</a>
+        <a href="#about" class="nav-link">Our Mission</a>
+        <a href="#founder" class="nav-link">Founder</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#home" data-mobile-link>Home</a>
+    <a href="#games" data-mobile-link>Our Games</a>
+    <a href="#about" data-mobile-link>Our Mission</a>
+    <a href="#founder" data-mobile-link>Founder</a>
+    <a href="#contact" data-mobile-link>Contact</a>
+    <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">🌙</button>
+  </nav>
+
+  <!-- ==================== MAIN ==================== -->
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero section" id="home">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="container hero-container">
+        <!-- Floating 3D objects that react to mouse -->
+        <div class="hero-floaters" id="heroFloaters" aria-hidden="true">
+          <div class="hero-float-item" data-depth="0.3" data-speed="2.8" style="--x: 2%; --y: 15%;">
+            <div class="float-3d-card">📖</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.5" data-speed="3.2" style="--x: 85%; --y: 20%;">
+            <div class="float-3d-card accent-coral">🧩</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.2" data-speed="3.8" style="--x: 12%; --y: 70%;">
+            <div class="float-3d-card accent-blue">💡</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.6" data-speed="2.5" style="--x: 90%; --y: 65%;">
+            <div class="float-3d-card accent-mint">🚀</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.4" data-speed="3.5" style="--x: 25%; --y: 100%;">
+            <div class="float-3d-card accent-gold">🎨</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.35" data-speed="4.0" style="--x: 75%; --y: 82%;">
+            <div class="float-3d-card">✨</div>
+          </div>
+          <div class="hero-float-item" data-depth="0.25" data-speed="3.6" style="--x: 50%; --y: 100%;">
+            <div class="float-3d-card accent-blue">⭐</div>
+          </div>
+        </div>
+
+        <p class="hero-greeting" id="heroGreeting">Welcome to Storybook Interactive ✨</p>
+        <h1 class="hero-title" id="heroTitle">Making Learning Fun<br>Through <span class="play-text">Play!</span> 🎮
+        </h1>
+        <p class="hero-bio" id="heroBio">We create educational games that spark curiosity, inspire creativity, and make
+          learning an exciting adventure for everyone.</p>
+        <div class="hero-actions" id="heroActions">
+          <a href="#games" class="btn btn-primary">Explore Our Games</a>
+          <a href="#about" class="btn btn-secondary">Our Mission</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OUR GAMES ========== -->
+    <section class="section" id="games">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-label">✨ Our Games ✨</p>
+          <h2>The Worlds We're Building</h2>
+          <p class="section-desc">We're currently cooking up some exciting educational games. Here's a sneak peek at
+            what's coming.</p>
+        </div>
+
+        <div class="game-grid">
+          <!-- Game 1 -->
+          <article class="game-card" id="game-1">
+            <div class="game-card-titlebar">
+              <div class="window-buttons">
+                <span class="window-btn close"></span>
+                <span class="window-btn minimize"></span>
+                <span class="window-btn maximize"></span>
+              </div>
+              <span class="window-title">🗺️ Adventure · Educational</span>
+            </div>
+            <div class="game-card-image-container">
+              <img src="assets/images/game-adventure.jpg"
+                alt="Concept art for Pathfinders: Explorer discovering glowing symbols in ancient forest ruins"
+                class="game-card-image" loading="lazy" width="640" height="400">
+              <div class="game-card-overlay">
+                <span class="btn btn-primary">Coming Soon ✨</span>
+              </div>
+            </div>
+            <div class="game-card-content">
+              <h3>
+                Pathfinders
+                <span class="game-status game-status--dev">🔬 In Development</span>
+              </h3>
+              <p>An educational adventure where learning becomes part of the quest. Explore ancient worlds, solve
+                puzzles, and uncover knowledge hidden in the ruins.</p>
+              <div class="game-tags">
+                <span class="game-tag">Adventure</span>
+                <span class="game-tag">Educational</span>
+                <span class="game-tag">Mobile</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game 2 -->
+          <article class="game-card" id="game-2">
+            <div class="game-card-titlebar">
+              <div class="window-buttons">
+                <span class="window-btn close"></span>
+                <span class="window-btn minimize"></span>
+                <span class="window-btn maximize"></span>
+              </div>
+              <span class="window-title">🧩 Puzzle · Exploration</span>
+            </div>
+            <div class="game-card-image-container">
+              <img src="assets/images/game-puzzle.jpg"
+                alt="Concept art for Skyward Academy: Character solving puzzles on floating islands"
+                class="game-card-image" loading="lazy" width="640" height="400">
+              <div class="game-card-overlay">
+                <span class="btn btn-primary">Coming Soon ✨</span>
+              </div>
+            </div>
+            <div class="game-card-content">
+              <h3>
+                Skyward Academy
+                <span class="game-status">🎨 Concept</span>
+              </h3>
+              <p>A puzzle-exploration game set on floating islands where every mechanism teaches a new concept. Connect,
+                build, and discover your way to the sky.</p>
+              <div class="game-tags">
+                <span class="game-tag">Puzzle</span>
+                <span class="game-tag">Exploration</span>
+                <span class="game-tag">PC</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OUR MISSION ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-label">Our Mission</p>
+          <h2 class="sparkle-text">To make every learner the hero of their own story</h2>
+        </div>
+
+        <div class="mission-content text-center">
+          <p>
+            🌟 <strong>Storybook Interactive</strong> is an independent game studio from India.
+            We believe that learning should be an adventure, not a chore!
+          </p>
+          <p>
+            Our games are designed to make education engaging, interactive, and genuinely fun for learners of all ages.
+            Through creativity and innovation, we're building interactive experiences that combine the joy of play with
+            the power of learning.
+          </p>
+        </div>
+
+        <div class="mission-values">
+          <div class="value-card">
+            <span class="value-icon">📖</span>
+            <h3>Story</h3>
+            <p>Great learning starts with a great story that makes you want to know what happens next.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">🎮</span>
+            <h3>Play</h3>
+            <p>Game mechanics turn curiosity into action. Play, experiment, fail, and learn.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">✨</span>
+            <h3>Discovery</h3>
+            <p>The best learning happens when you feel like you discovered it on your own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOUNDER ========== -->
+    <section class="section" id="founder">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-label">The Person Behind the Book</p>
+          <h2>Meet the Founder</h2>
+        </div>
+
+        <div class="founder-grid">
+          <div class="founder-interactive-portrait" id="founderPortrait">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="founder-svg">
+              <circle cx="45" cy="55" r="25" class="founder-skin" />
+              <circle cx="155" cy="55" r="25" class="founder-skin" />
+              <circle cx="45" cy="55" r="15" class="founder-inner-ear" />
+              <circle cx="155" cy="55" r="15" class="founder-inner-ear" />
+              <circle cx="100" cy="110" r="80" class="founder-skin" />
+              <ellipse cx="100" cy="135" rx="35" ry="25" class="founder-snout" />
+              <ellipse cx="100" cy="125" rx="12" ry="8" class="founder-nose" />
+              <path d="M 85 145 Q 100 160 115 145" class="founder-mouth" fill="none" stroke="currentColor"
+                stroke-width="3" stroke-linecap="round" />
+              <g class="eye">
+                <circle cx="70" cy="95" r="15" class="eye-socket" fill="#FFFFFF" stroke="#1a1a2e" stroke-width="3" />
+                <g class="pupil-group" id="leftPupil">
+                  <circle cx="70" cy="95" r="6" fill="#1a1a2e" />
+                  <circle cx="72" cy="93" r="2" fill="#FFFFFF" />
+                </g>
+              </g>
+              <g class="eye">
+                <circle cx="130" cy="95" r="15" class="eye-socket" fill="#FFFFFF" stroke="#1a1a2e" stroke-width="3" />
+                <g class="pupil-group" id="rightPupil">
+                  <circle cx="130" cy="95" r="6" fill="#1a1a2e" />
+                  <circle cx="132" cy="93" r="2" fill="#FFFFFF" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="founder-info">
+            <h3>Nipanko Nath Mazumder</h3>
+            <p class="founder-role">Founder & Director</p>
+            <p class="founder-bio">
+              A game developer, storyteller and lifelong learner who believes the best way to teach something is
+              to make it so fun that people don't realize they're learning. Nipanko founded Storybook Interactive with a
+              simple mission: <strong>To build engaging games and interactive experiences that make learning genuinely
+                enjoyable, inspiring curiosity through meaningful stories and play.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-label">Get in Touch</p>
+          <h2>Say Hello! 👋</h2>
+          <p class="section-desc">Have an idea, want to collaborate, or just want to say hello?</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <form class="contact-form" id="contactForm" aria-label="Contact form">
+            <input type="text" id="contact-name" name="name" placeholder="✏️ Your Name" required aria-label="Your name">
+            <input type="email" id="contact-email" name="email" placeholder="📧 Your Email" required
+              aria-label="Your email">
+            <textarea id="contact-message" name="message" rows="5" placeholder="💬 Your Message" required
+              aria-label="Your message"></textarea>
+            <button type="submit" class="btn btn-primary contact-submit" id="contactSubmit">Send Message →</button>
+            <p id="formStatus" class="form-status"></p>
+          </form>
+          <p class="contact-email">
+            Or email us directly at <a
+              href="mailto:nipanko@storybookinteractive.com">nipanko@storybookinteractive.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">Storybook <span>Interactive</span></div>
+        <p class="footer-tagline">"Making Learning Fun Through Play!" 🎮</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#games">Games</a>
+          <a href="#about">Mission</a>
+          <a href="#founder">Founder</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-copy">© 2025 Storybook Interactive Private Limited · India 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
