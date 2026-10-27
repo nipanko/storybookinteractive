@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Storybook Interactive — Making Learning Fun Through Play | Educational Game Studio India</title>
+  <title>Storybook Interactive — Creators of ELEMENTZ | Educational Game Studio</title>
   <meta name="description"
-    content="Storybook Interactive is an independent game studio from India creating educational games and interactive experiences. We make learning genuinely fun through play, story, and discovery.">
+    content="Storybook Interactive Private Limited is an independent game studio from India. Creators of ELEMENTZ — an upcoming educational chemistry & elemental puzzle adventure game.">
   <meta name="keywords"
-    content="Storybook Interactive, educational games, learning games, indie game studio India, game-based learning, interactive learning, educational game development, fun learning games, Nipanko Nath Mazumder">
+    content="Storybook Interactive, ELEMENTZ, ELEMENTZ game, educational games, chemistry game, STEM games, indie game studio India, Nipanko Nath Mazumder">
   <meta name="author" content="Storybook Interactive Private Limited">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://storybookinteractive.com/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://storybookinteractive.com/">
-  <meta property="og:title" content="Storybook Interactive — Making Learning Fun Through Play!">
+  <meta property="og:title" content="Storybook Interactive — Creators of ELEMENTZ">
   <meta property="og:description"
-    content="An independent game studio from India creating educational games that spark curiosity, inspire creativity, and make learning an exciting adventure.">
+    content="An independent game studio from India creating educational games that turn curiosity into adventure. Introducing ELEMENTZ — our upcoming flagship chemistry game.">
   <meta property="og:site_name" content="Storybook Interactive">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Storybook Interactive — Making Learning Fun Through Play!">
+  <meta name="twitter:title" content="Storybook Interactive — Creators of ELEMENTZ">
   <meta name="twitter:description"
-    content="An independent game studio from India creating educational games that spark curiosity and make learning an adventure.">
+    content="An independent game studio from India creating educational games. Introducing ELEMENTZ — our upcoming flagship elemental chemistry game.">
 
   <!-- Theme & Icons -->
-  <meta name="theme-color" content="#FFC857">
+  <meta name="theme-color" content="#0a0914">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/svg+xml" href="StorybookInteractiveLOGO.svg">
 
-  <!-- Fonts -->
+  <!-- Modern Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Schema.org / JSON-LD -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,358 +50,447 @@
     "name": "Storybook Interactive Private Limited",
     "alternateName": "Storybook Interactive",
     "url": "https://storybookinteractive.com",
-    "logo": "https://storybookinteractive.com/favicon.svg",
+    "logo": "https://storybookinteractive.com/StorybookInteractiveLOGO.svg",
     "email": "nipanko@storybookinteractive.com",
-    "description": "An independent game studio from India creating educational games and interactive experiences. Making Learning Fun Through Play!",
+    "description": "An independent game studio from India creating educational games. Creators of upcoming title ELEMENTZ.",
     "foundingDate": "2026",
     "founder": {
       "@type": "Person",
       "name": "Nipanko Nath Mazumder",
-      "jobTitle": "Founder & Director"
+      "jobTitle": "Founder & Creative Director"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN"
-    },
-    "sameAs": []
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Storybook Interactive",
-    "url": "https://storybookinteractive.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://storybookinteractive.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
   }
   </script>
 </head>
 
 <body>
 
-  <!-- Background layers -->
-  <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
-  <div class="aesthetic-shapes" id="aestheticShapes" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-noise" aria-hidden="true"></div>
+  <!-- ==================== FIXED BACKGROUND VIDEO ==================== -->
+  <video class="hero-video" autoplay muted loop playsinline id="heroVideo">
+    <source src="assets/background.mp4" type="video/mp4">
+  </video>
 
-  <!-- Loader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-inner">
-      <div class="loader-book">
-        <div class="loader-page"></div>
-        <div class="loader-page"></div>
-        <div class="loader-page"></div>
+  <!-- Atmospheric Backdrop Overlay -->
+  <div class="hero-video-overlay hero-blur-overlay" aria-hidden="true"></div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-cinematic" id="home">
+
+    <!-- NAVBAR -->
+    <header class="cin-header" id="cinHeader">
+      <div class="cin-header-inner">
+        <!-- Brand Logo -->
+        <a href="#home" class="cin-logo animate-blur-fade-up" style="animation-delay:0ms" aria-label="Storybook Interactive Home">
+          <img src="StorybookInteractiveLOGO.svg" alt="Storybook Interactive Elephant Lotus Logo" class="cin-logo-img" width="56" height="56">
+          <div class="cin-logo-text-group">
+            <span class="cin-logo-title">STORYBOOK<span class="cin-logo-accent">INTERACTIVE</span></span>
+            <span class="cin-logo-sub">STUDIOS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (Hidden on Mobile) -->
+        <nav class="cin-nav-desktop" aria-label="Main navigation">
+          <a href="#home" class="cin-nav-link animate-blur-fade-up" style="animation-delay:100ms">Home</a>
+          <a href="#game" class="cin-nav-link animate-blur-fade-up" style="animation-delay:150ms">ELEMENTZ</a>
+          <a href="#about" class="cin-nav-link animate-blur-fade-up" style="animation-delay:200ms">Our Mission</a>
+          <a href="#founder" class="cin-nav-link animate-blur-fade-up" style="animation-delay:250ms">Founder</a>
+          <a href="#contact" class="cin-nav-link animate-blur-fade-up" style="animation-delay:300ms">Contact</a>
+        </nav>
+
+        <!-- Right Controls -->
+        <div class="cin-nav-controls">
+          <!-- Theme Toggle Button -->
+          <button class="cin-circle-btn animate-blur-fade-up" style="animation-delay:350ms" id="cinThemeToggle" aria-label="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle (ONLY on Mobile screens) -->
+          <button class="cin-circle-btn cin-hamburger" id="cinMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="cin-icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+            <svg class="cin-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
       </div>
-      <p class="loader-text">Storybook <span>Interactive</span></p>
-    </div>
-  </div>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="header-inner">
-      <a href="#home" class="site-logo" aria-label="Storybook Interactive — Home">
-        Storybook <span>Interactive</span>
-      </a>
-
-      <nav class="nav-desktop" aria-label="Main navigation">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#games" class="nav-link">Our Games</a>
-        <a href="#about" class="nav-link">Our Mission</a>
-        <a href="#founder" class="nav-link">Founder</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      <!-- Mobile Navigation Drawer -->
+      <nav class="cin-mobile-menu" id="cinMobileMenu" aria-label="Mobile navigation">
+        <a href="#home" class="cin-mobile-link" data-mobile-link>Home</a>
+        <a href="#game" class="cin-mobile-link" data-mobile-link>ELEMENTZ</a>
+        <a href="#about" class="cin-mobile-link" data-mobile-link>Our Mission</a>
+        <a href="#founder" class="cin-mobile-link" data-mobile-link>Founder</a>
+        <a href="#contact" class="cin-mobile-link" data-mobile-link>Contact</a>
       </nav>
+    </header>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <!-- HERO CONTENT -->
+    <div class="cin-hero-content">
+      <div class="cin-hero-inner">
+        <div class="cin-hero-left">
+          <!-- Metadata Badges -->
+          <div class="cin-meta animate-blur-fade-up" style="animation-delay:300ms">
+            <span class="hero-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="4"/></svg>
+              Educational Games
+            </span>
+            <span class="hero-badge hero-badge--pink">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Indie Game Studio
+            </span>
+            <span class="hero-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              India 🇮🇳
+            </span>
+          </div>
 
-  <!-- Mobile menu -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-    <a href="#home" data-mobile-link>Home</a>
-    <a href="#games" data-mobile-link>Our Games</a>
-    <a href="#about" data-mobile-link>Our Mission</a>
-    <a href="#founder" data-mobile-link>Founder</a>
-    <a href="#contact" data-mobile-link>Contact</a>
-    <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">🌙</button>
-  </nav>
+          <!-- Hero Headline (Interactive, Playful & Animated) -->
+          <h1 class="cin-title" id="heroInteractiveTitle" aria-label="Making Learning Fun Through Play.">
+            <span class="hero-title-line">
+              <span class="hero-word" data-word="Making">Making</span>
+              <span class="hero-word" data-word="Learning">Learning</span>
+              <span class="hero-word hero-word--fun" id="wordFun" data-word="Fun" role="button" tabindex="0" title="Click or hover for fun!">
+                <span class="fun-text">Fun</span>
+                <span class="fun-sparkle-cluster" aria-hidden="true">
+                  <span class="fun-sparkle sparkle-1">✨</span>
+                  <span class="fun-sparkle sparkle-2">🎈</span>
+                </span>
+              </span>
+            </span>
+            <span class="hero-title-line">
+              <span class="hero-word" data-word="Through">Through</span>
+              <span class="hero-word hero-word--play" id="wordPlay" data-word="Play." role="button" tabindex="0" title="Click to play!">
+                <span class="cin-title-highlight play-text">Play.</span>
+                <span class="play-tag" aria-hidden="true">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  PLAY
+                </span>
+                <span class="play-sparkle sparkle-star" aria-hidden="true">★</span>
+                <span class="play-sparkle sparkle-dot" aria-hidden="true">✦</span>
+              </span>
+            </span>
+          </h1>
 
-  <!-- ==================== MAIN ==================== -->
-  <main>
+          <!-- Hero Description -->
+          <p class="cin-desc animate-blur-fade-up" style="animation-delay:500ms">
+            We build immersive educational games and interactive worlds where science, elemental chemistry, and storytelling merge into unforgettable adventures.
+          </p>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero section" id="home">
-      <canvas id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="container hero-container">
-        <!-- Floating 3D objects that react to mouse -->
-        <div class="hero-floaters" id="heroFloaters" aria-hidden="true">
-          <div class="hero-float-item" data-depth="0.3" data-speed="2.8" style="--x: 2%; --y: 15%;">
-            <div class="float-3d-card">📖</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.5" data-speed="3.2" style="--x: 85%; --y: 20%;">
-            <div class="float-3d-card accent-coral">🧩</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.2" data-speed="3.8" style="--x: 12%; --y: 70%;">
-            <div class="float-3d-card accent-blue">💡</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.6" data-speed="2.5" style="--x: 90%; --y: 65%;">
-            <div class="float-3d-card accent-mint">🚀</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.4" data-speed="3.5" style="--x: 25%; --y: 100%;">
-            <div class="float-3d-card accent-gold">🎨</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.35" data-speed="4.0" style="--x: 75%; --y: 82%;">
-            <div class="float-3d-card">✨</div>
-          </div>
-          <div class="hero-float-item" data-depth="0.25" data-speed="3.6" style="--x: 50%; --y: 100%;">
-            <div class="float-3d-card accent-blue">⭐</div>
+          <!-- CTAs -->
+          <div class="cin-cta animate-blur-fade-up" style="animation-delay:600ms">
+            <a href="#game" class="btn-primary-glow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Explore ELEMENTZ
+            </a>
+            <a href="#about" class="btn-glass">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Our Mission
+            </a>
           </div>
         </div>
 
-        <p class="hero-greeting" id="heroGreeting">Welcome to Storybook Interactive ✨</p>
-        <h1 class="hero-title" id="heroTitle">Making Learning Fun<br>Through <span class="play-text">Play!</span> 🎮
-        </h1>
-        <p class="hero-bio" id="heroBio">We create educational games that spark curiosity, inspire creativity, and make
-          learning an exciting adventure for everyone.</p>
-        <div class="hero-actions" id="heroActions">
-          <a href="#games" class="btn btn-primary">Explore Our Games</a>
-          <a href="#about" class="btn btn-secondary">Our Mission</a>
+        <!-- Scroll Indicator -->
+        <div class="cin-hero-right animate-blur-fade-up" style="animation-delay:700ms">
+          <a href="#game" class="btn-glass btn-scroll-indicator" aria-label="Scroll down to ELEMENTZ game section">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            Scroll
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ========== OUR GAMES ========== -->
-    <section class="section" id="games">
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="cin-main">
+
+    <!-- ========== UPCOMING GAME: ELEMENTZ ========== -->
+    <section class="cin-section" id="game">
       <div class="container">
-        <div class="section-header text-center">
-          <p class="section-label">✨ Our Games ✨</p>
-          <h2>The Worlds We're Building</h2>
-          <p class="section-desc">We're currently cooking up some exciting educational games. Here's a sneak peek at
-            what's coming.</p>
+        <div class="cin-section-header">
+          <p class="cin-label-badge cin-label-badge--mint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            FLAGSHIP UPCOMING GAME
+          </p>
+          <h2>Introducing <span class="text-gradient-mint">ELEMENTZ</span></h2>
+          <p class="cin-section-desc">Our debut game. Master the periodic table, harness molecular reactions, and bend the laws of chemistry to solve the mysteries of a living world.</p>
         </div>
 
-        <div class="game-grid">
-          <!-- Game 1 -->
-          <article class="game-card" id="game-1">
-            <div class="game-card-titlebar">
-              <div class="window-buttons">
-                <span class="window-btn close"></span>
-                <span class="window-btn minimize"></span>
-                <span class="window-btn maximize"></span>
-              </div>
-              <span class="window-title">🗺️ Adventure · Educational</span>
-            </div>
-            <div class="game-card-image-container">
-              <img src="assets/images/game-adventure.jpg"
-                alt="Concept art for Pathfinders: Explorer discovering glowing symbols in ancient forest ruins"
-                class="game-card-image" loading="lazy" width="640" height="400">
-              <div class="game-card-overlay">
-                <span class="btn btn-primary">Coming Soon ✨</span>
-              </div>
-            </div>
-            <div class="game-card-content">
-              <h3>
-                Pathfinders
-                <span class="game-status game-status--dev">🔬 In Development</span>
-              </h3>
-              <p>An educational adventure where learning becomes part of the quest. Explore ancient worlds, solve
-                puzzles, and uncover knowledge hidden in the ruins.</p>
-              <div class="game-tags">
-                <span class="game-tag">Adventure</span>
-                <span class="game-tag">Educational</span>
-                <span class="game-tag">Mobile</span>
-              </div>
-            </div>
-          </article>
+        <!-- ELEMENTZ Master Showcase Card -->
+        <article class="elementz-showcase-card" id="elementzShowcase">
+          <!-- Top Media Showcase -->
+          <div class="elementz-media-container">
+            <img src="assets/images/elementz-hero.jpg" alt="ELEMENTZ game concept art showing elemental alchemy chamber with neon chemistry magic" class="elementz-hero-image" loading="lazy" width="1280" height="720">
+            <div class="elementz-media-overlay"></div>
 
-          <!-- Game 2 -->
-          <article class="game-card" id="game-2">
-            <div class="game-card-titlebar">
-              <div class="window-buttons">
-                <span class="window-btn close"></span>
-                <span class="window-btn minimize"></span>
-                <span class="window-btn maximize"></span>
+            <!-- Floating Status Bar -->
+            <div class="elementz-floating-header">
+              <div class="elementz-status-pill">
+                <span class="status-pulse-dot"></span>
+                <span>IN ACTIVE DEVELOPMENT</span>
               </div>
-              <span class="window-title">🧩 Puzzle · Exploration</span>
-            </div>
-            <div class="game-card-image-container">
-              <img src="assets/images/game-puzzle.jpg"
-                alt="Concept art for Skyward Academy: Character solving puzzles on floating islands"
-                class="game-card-image" loading="lazy" width="640" height="400">
-              <div class="game-card-overlay">
-                <span class="btn btn-primary">Coming Soon ✨</span>
+              <div class="elementz-tech-pill">
+                <span>STORYBOOK ORIGINAL</span>
               </div>
             </div>
-            <div class="game-card-content">
-              <h3>
-                Skyward Academy
-                <span class="game-status">🎨 Concept</span>
-              </h3>
-              <p>A puzzle-exploration game set on floating islands where every mechanism teaches a new concept. Connect,
-                build, and discover your way to the sky.</p>
-              <div class="game-tags">
-                <span class="game-tag">Puzzle</span>
-                <span class="game-tag">Exploration</span>
-                <span class="game-tag">PC</span>
+
+            <!-- Media Banner Title Overlay -->
+            <div class="elementz-media-caption">
+              <div class="elementz-logo-badge">ELEMENTZ</div>
+              <p class="elementz-subtitle">The Chemistry & Elemental Adventure</p>
+            </div>
+          </div>
+
+          <!-- Content Body -->
+          <div class="elementz-content-body">
+            <!-- Lore & Concept -->
+            <div class="elementz-overview">
+              <div class="overview-text">
+                <h3>Where Science Feels Like Magic</h3>
+                <p>
+                  In the fractured universe of <strong>ELEMENTZ</strong>, natural elements are scattered across ruined temples and volatile biomes. As an Elemental Alchemist, you don't just solve puzzles—you conduct real chemical reactions. Combine hydrogen and oxygen to forge water, trigger exothermic detonations to shatter crystalline gates, conduct electricity through noble metals, and manipulate states of matter in real-time.
+                </p>
+              </div>
+
+              <!-- Platforms & Engine -->
+              <div class="elementz-meta-box">
+                <span class="meta-label">TARGET PLATFORMS</span>
+                <div class="platform-tags">
+                  <span class="platform-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489l.86-3.528A6.002 6.002 0 0 1 6 12c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.003-2.206 5.485-5.086 5.928l.859 3.528C18.665 20.218 22 16.488 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    PC / Steam
+                  </span>
+                  <span class="platform-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    Mobile (iOS & Android)
+                  </span>
+                  <span class="platform-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    WebGL Demo
+                  </span>
+                </div>
               </div>
             </div>
-          </article>
-        </div>
+
+            <!-- 3 Core Gameplay Pillars -->
+            <div class="elementz-pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon-box pillar-icon--mint">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><line x1="10.4" y1="10.4" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="13.6" y2="10.4"/></svg>
+                </div>
+                <h4>Interactive Periodic Fusion</h4>
+                <p>Experiment with real elements. Mix alkali metals with moisture to ignite bursts, or synthesize acidic compounds to corrode obstacles.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon-box pillar-icon--blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h4>Dynamic State Mechanics</h4>
+                <p>Freeze flowing rivers into solid ice bridges, boil toxic swamps into harvestable gas, and manipulate phase shifts in real time.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon-box pillar-icon--pink">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4>Zero Rote Memorization</h4>
+                <p>No boring flashcards. Atomic numbers, valencies, and bond types are discovered through puzzles that test intuition and creativity.</p>
+              </div>
+            </div>
+
+            <!-- Footer Action Bar -->
+            <div class="elementz-action-bar">
+              <a href="#contact" class="btn-primary-glow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Join Alpha Playtest & Updates
+              </a>
+              <span class="elementz-release-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Coming Soon · In Active Development
+              </span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- ========== OUR MISSION ========== -->
-    <section class="section" id="about">
+    <section class="cin-section" id="about">
       <div class="container">
-        <div class="section-header text-center">
-          <p class="section-label">Our Mission</p>
-          <h2 class="sparkle-text">To make every learner the hero of their own story</h2>
+        <div class="cin-section-header">
+          <p class="cin-label-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            OUR MISSION
+          </p>
+          <h2>To Make Every Learner the Hero of Their Story</h2>
+          <p class="cin-section-desc">We believe education shouldn't feel like a chore. By merging deep game mechanics with rigorous storytelling, we turn learning into an adventure.</p>
         </div>
 
-        <div class="mission-content text-center">
-          <p>
-            🌟 <strong>Storybook Interactive</strong> is an independent game studio from India.
-            We believe that learning should be an adventure, not a chore!
-          </p>
-          <p>
-            Our games are designed to make education engaging, interactive, and genuinely fun for learners of all ages.
-            Through creativity and innovation, we're building interactive experiences that combine the joy of play with
-            the power of learning.
-          </p>
-        </div>
+        <div class="mission-cards-grid">
+          <div class="mission-value-card">
+            <div class="value-icon-wrapper value-icon--cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+            </div>
+            <h3>Compelling Story</h3>
+            <p>Every scientific principle begins with a mystery. A narrative foundation gives players a reason to care, wonder, and explore further.</p>
+          </div>
 
-        <div class="mission-values">
-          <div class="value-card">
-            <span class="value-icon">📖</span>
-            <h3>Story</h3>
-            <p>Great learning starts with a great story that makes you want to know what happens next.</p>
+          <div class="mission-value-card">
+            <div class="value-icon-wrapper value-icon--pink">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="4"/></svg>
+            </div>
+            <h3>Tactile Play</h3>
+            <p>Interactive mechanics turn abstract theory into muscle memory. Experiment without fear of failure—test, adapt, and learn through doing.</p>
           </div>
-          <div class="value-card">
-            <span class="value-icon">🎮</span>
-            <h3>Play</h3>
-            <p>Game mechanics turn curiosity into action. Play, experiment, fail, and learn.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">✨</span>
-            <h3>Discovery</h3>
-            <p>The best learning happens when you feel like you discovered it on your own.</p>
+
+          <div class="mission-value-card">
+            <div class="value-icon-wrapper value-icon--gold">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <h3>True Discovery</h3>
+            <p>The eureka moment is sacred. When players solve puzzles on their own, the knowledge stays with them for life.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== FOUNDER ========== -->
-    <section class="section" id="founder">
+    <section class="cin-section" id="founder">
       <div class="container">
-        <div class="section-header text-center">
-          <p class="section-label">The Person Behind the Book</p>
+        <div class="cin-section-header">
+          <p class="cin-label-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            LEADERSHIP
+          </p>
           <h2>Meet the Founder</h2>
+          <p class="cin-section-desc">Behind Storybook Interactive is a passionate vision for games that inspire genuine curiosity.</p>
         </div>
 
-        <div class="founder-grid">
-          <div class="founder-interactive-portrait" id="founderPortrait">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="founder-svg">
-              <circle cx="45" cy="55" r="25" class="founder-skin" />
-              <circle cx="155" cy="55" r="25" class="founder-skin" />
-              <circle cx="45" cy="55" r="15" class="founder-inner-ear" />
-              <circle cx="155" cy="55" r="15" class="founder-inner-ear" />
-              <circle cx="100" cy="110" r="80" class="founder-skin" />
-              <ellipse cx="100" cy="135" rx="35" ry="25" class="founder-snout" />
-              <ellipse cx="100" cy="125" rx="12" ry="8" class="founder-nose" />
-              <path d="M 85 145 Q 100 160 115 145" class="founder-mouth" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" />
-              <g class="eye">
-                <circle cx="70" cy="95" r="15" class="eye-socket" fill="#FFFFFF" stroke="#1a1a2e" stroke-width="3" />
-                <g class="pupil-group" id="leftPupil">
-                  <circle cx="70" cy="95" r="6" fill="#1a1a2e" />
-                  <circle cx="72" cy="93" r="2" fill="#FFFFFF" />
-                </g>
-              </g>
-              <g class="eye">
-                <circle cx="130" cy="95" r="15" class="eye-socket" fill="#FFFFFF" stroke="#1a1a2e" stroke-width="3" />
-                <g class="pupil-group" id="rightPupil">
-                  <circle cx="130" cy="95" r="6" fill="#1a1a2e" />
-                  <circle cx="132" cy="93" r="2" fill="#FFFFFF" />
-                </g>
-              </g>
-            </svg>
+        <div class="founder-spotlight-card">
+          <!-- Founder Insignia / Stylized Visual Avatar -->
+          <div class="founder-avatar-frame">
+            <div class="founder-insignia-ring">
+              <img src="StorybookInteractiveLOGO.svg" alt="Storybook Interactive Logo" class="founder-crest-img" width="84" height="84">
+            </div>
+            <div class="founder-status-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              STUDIO DIRECTOR
+            </div>
           </div>
-          <div class="founder-info">
-            <h3>Nipanko Nath Mazumder</h3>
-            <p class="founder-role">Founder & Director</p>
-            <p class="founder-bio">
-              A game developer, storyteller and lifelong learner who believes the best way to teach something is
-              to make it so fun that people don't realize they're learning. Nipanko founded Storybook Interactive with a
-              simple mission: <strong>To build engaging games and interactive experiences that make learning genuinely
-                enjoyable, inspiring curiosity through meaningful stories and play.</strong>
+
+          <!-- Founder Info -->
+          <div class="founder-bio-content">
+            <div class="founder-headline">
+              <h3>Nipanko Nath Mazumder</h3>
+              <p class="founder-title-text">Founder & Game Director · Storybook Interactive Private Limited</p>
+            </div>
+
+            <blockquote class="founder-quote">
+              "The best way to teach anything isn't through lectures or flashcards—it's by creating a world so thrilling that learning becomes an unavoidable side effect of having fun."
+            </blockquote>
+
+            <p class="founder-narrative">
+              Nipanko founded <strong>Storybook Interactive</strong> with a singular mission: to make world-class educational games from India that compete globally in quality, aesthetics, and pure gameplay fun. With <strong>ELEMENTZ</strong> as the studio's debut flagship title, we're blending molecular chemistry with game design to show that science is the most magical adventure of all.
             </p>
+
+            <div class="founder-footer-links">
+              <a href="mailto:nipanko@storybookinteractive.com" class="founder-contact-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                nipanko@storybookinteractive.com
+              </a>
+              <span class="founder-location-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                India 🇮🇳
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== CONTACT ========== -->
-    <section class="section" id="contact">
+    <section class="cin-section" id="contact">
       <div class="container">
-        <div class="section-header text-center">
-          <p class="section-label">Get in Touch</p>
-          <h2>Say Hello! 👋</h2>
-          <p class="section-desc">Have an idea, want to collaborate, or just want to say hello?</p>
+        <div class="cin-section-header">
+          <p class="cin-label-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            GET IN TOUCH
+          </p>
+          <h2>Let's Build the Future of Play</h2>
+          <p class="cin-section-desc">Interested in ELEMENTZ alpha access, studio partnerships, or just want to say hello? Drop us a note.</p>
         </div>
 
-        <div class="contact-wrapper">
-          <form class="contact-form" id="contactForm" aria-label="Contact form">
-            <input type="text" id="contact-name" name="name" placeholder="✏️ Your Name" required aria-label="Your name">
-            <input type="email" id="contact-email" name="email" placeholder="📧 Your Email" required
-              aria-label="Your email">
-            <textarea id="contact-message" name="message" rows="5" placeholder="💬 Your Message" required
-              aria-label="Your message"></textarea>
-            <button type="submit" class="btn btn-primary contact-submit" id="contactSubmit">Send Message →</button>
-            <p id="formStatus" class="form-status"></p>
+        <div class="contact-glass-card">
+          <form class="contact-form" id="contactForm" aria-label="Studio contact form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <div class="input-icon-wrapper">
+                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="contact-name" name="name" placeholder="Nipanko Nath Mazumder" required aria-label="Your name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <div class="input-icon-wrapper">
+                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <input type="email" id="contact-email" name="email" placeholder="you@domain.com" required aria-label="Your email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <div class="input-icon-wrapper">
+                <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your idea, playtest interest, or collaboration..." required aria-label="Your message"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary-glow btn-submit" id="contactSubmit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              Send Message
+            </button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
           </form>
-          <p class="contact-email">
-            Or email us directly at <a
-              href="mailto:nipanko@storybookinteractive.com">nipanko@storybookinteractive.com</a>
-          </p>
+
+          <div class="direct-email-bar">
+            <span>Or reach us directly via email:</span>
+            <a href="mailto:nipanko@storybookinteractive.com" class="direct-email-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              nipanko@storybookinteractive.com
+            </a>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="cin-footer" role="contentinfo">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">Storybook <span>Interactive</span></div>
-        <p class="footer-tagline">"Making Learning Fun Through Play!" 🎮</p>
-        <nav class="footer-links" aria-label="Footer navigation">
+      <div class="cin-footer-inner">
+        <a href="#home" class="cin-footer-brand">
+          <img src="StorybookInteractiveLOGO.svg" alt="Storybook Interactive Logo" width="46" height="46" class="footer-logo-img">
+          <span>STORYBOOK <span class="text-gradient-pink">INTERACTIVE</span></span>
+        </a>
+        <p class="cin-footer-tagline">"Making Learning Fun Through Play."</p>
+
+        <nav class="cin-footer-links" aria-label="Footer navigation">
           <a href="#home">Home</a>
-          <a href="#games">Games</a>
-          <a href="#about">Mission</a>
+          <a href="#game">ELEMENTZ</a>
+          <a href="#about">Our Mission</a>
           <a href="#founder">Founder</a>
           <a href="#contact">Contact</a>
         </nav>
-        <p class="footer-copy">© 2025 Storybook Interactive Private Limited · India 🇮🇳</p>
+
+        <p class="cin-footer-copy">© 2026 Storybook Interactive Private Limited · Incorporated in India 🇮🇳 · All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== SCRIPTS ==================== -->
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>
-
 </html>
